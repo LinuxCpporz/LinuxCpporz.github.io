@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://linuxcpporz.github.io</id>
     <title>云渺阿姨的学习笔记</title>
-    <updated>2021-10-16T17:28:52.315Z</updated>
+    <updated>2021-10-16T19:40:48.822Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://linuxcpporz.github.io"/>
     <link rel="self" href="https://linuxcpporz.github.io/atom.xml"/>
@@ -10,4 +10,131 @@
     <logo>https://linuxcpporz.github.io/images/avatar.png</logo>
     <icon>https://linuxcpporz.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 云渺阿姨的学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[前端深入Vue框架]]></title>
+        <id>https://linuxcpporz.github.io/post/qian-duan-shen-ru-vue-kuang-jia/</id>
+        <link href="https://linuxcpporz.github.io/post/qian-duan-shen-ru-vue-kuang-jia/">
+        </link>
+        <updated>2021-10-16T19:36:10.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="概述">概述</h1>
+<p>基于JavaScript的渐进式前段框架<br>
+基于JavaScript:本质就是封装了js代码,提供vue.js文件<br>
+渐进式:vue框架的功能很丰富,可以自己选择用哪些功能<br>
+前端框架:只是提供了一套API,指定软件的流程<br>
+特点:轻量级 + MVVM思想 + 数据驱动/双向绑定 + 组件化</p>
+<p>#步骤</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;测试 vue入门案例&lt;/title&gt;
+        &lt;!-- 步骤: 1.引入vue.js文件 
+            src指定js文件的位置,原则:先找到和自己网页同级的资源
+        --&gt;
+        &lt;script src=&quot;vue/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 2.准备数据渲染区:是指在指定位置展示vue提供的数据 --&gt;
+        &lt;div id=&quot;app&quot;&gt;{{msg}}{{hh}}&lt;/div&gt;
+        
+        &lt;!-- 3.使用vue准备数据,让第二步获取数据 --&gt;
+        &lt;script&gt;
+            var a = {
+                msg:&quot;99级封号斗罗&quot;,
+                hh:&quot;sdf&quot;
+            }
+            new Vue({
+                //el属性是挂载点,即将把数据展示在指定位置(css选择器)
+                el:&quot;#app&quot;,//指定数据渲染区,id选择器,用#获取id的值
+                //data属性是用来准备数据
+                data:a
+            })
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="mvvm">MVVM</h1>
+<p>M:Model 模型,数据 javascript对象 是指存数据的地方<br>
+V:View 视图 DOM 是指展示数据的地方<br>
+VM:ViewModel 通讯 观察者 练习了M和V的关系(new Vue)<br>
+好处是可以松耦合</p>
+<figure data-type="image" tabindex="1"><img src="https://linuxcpporz.github.io/post-images/1634413068538.png" alt="" loading="lazy"></figure>
+<h1 id="vue使用">Vue使用</h1>
+<p>vue使用步骤:导入vue.js文件,定位好view位置和model数据,通过new一个Vue对象来实现数据和视图的联系</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;测试 vue入门案例&lt;/title&gt;
+        &lt;!-- 步骤: 1.引入vue.js文件 
+            src指定js文件的位置,原则:先找到和自己网页同级的资源
+        --&gt;
+        &lt;script src=&quot;vue/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 2.准备数据渲染区:是指在指定位置展示vue提供的数据 --&gt;
+        &lt;div id=&quot;app&quot;&gt;{{msg}}{{hh}}&lt;/div&gt;
+        
+        &lt;!-- 3.使用vue准备数据,让第二步获取数据 --&gt;
+        &lt;script&gt;
+            var a = {
+                msg:&quot;99级封号斗罗&quot;,
+                hh:&quot;sdf&quot;
+            }
+            new Vue({
+                //el属性是挂载点,即将把数据展示在指定位置(css选择器)
+                el:&quot;#app&quot;,//指定数据渲染区,id选择器,用#获取id的值
+                //data属性是用来准备数据
+                data:a
+            })
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="浅析vue对象">浅析Vue对象</h1>
+<p>el是挂载点,是等待被数据渲染的位置,data是这个位置可以使用的数据,另外还有methods这个位置可以使用的函数<br>
+data数据的三种方式:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;测试 data里数据的三种写法&lt;/title&gt;
+        &lt;script src=&quot;./vue/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;app&quot;&gt;{{msg}}&lt;/div&gt;
+        &lt;script&gt;
+            new Vue({
+                el:&quot;#app&quot;,
+                /* data数据的三种写法 */
+                //第一种:标准写法
+                // data:{
+                // 	msg:&quot;你好我是第一种写法标准写法&quot;
+                // }
+                //第二种:定义函数,返回对象
+                // data:function(){//方便的把组件间的关系实现松耦合
+                // 	return {
+                // 		msg:&quot;你好我是第二种写法定义函数,返回对象&quot;
+                // 	}
+                // }
+                //第三种:第二种的简写
+                data(){
+                    return{
+                        msg:&quot;你好我是第三种写法简写的函数&quot;
+                    }
+                }
+            })
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="vue指令">Vue指令</h1>
+<p>判断v-if<br>
+循环v-for<br>
+事件:v-on<br>
+绑定:v-bind<br>
+双向绑定:v-model<br>
+闪现:v-cloak</p>
+]]></content>
+    </entry>
 </feed>
