@@ -1,22 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://linuxcpporz.github.io</id>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>云渺阿姨的学习笔记</title>
-    <updated>2021-10-17T09:21:56.298Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://linuxcpporz.github.io"/>
-    <link rel="self" href="https://linuxcpporz.github.io/atom.xml"/>
-    <subtitle>记一些乱七八糟的前端和算法知识</subtitle>
-    <logo>https://linuxcpporz.github.io/images/avatar.png</logo>
-    <icon>https://linuxcpporz.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, 云渺阿姨的学习笔记</rights>
-    <entry>
-        <title type="html"><![CDATA[十四种常见的算法]]></title>
-        <id>https://linuxcpporz.github.io/post/shi-si-chong-chang-jian-de-suan-fa/</id>
-        <link href="https://linuxcpporz.github.io/post/shi-si-chong-chang-jian-de-suan-fa/">
-        </link>
-        <updated>2021-10-17T09:05:24.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="滑动窗口">滑动窗口</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css">
+    <link rel="stylesheet" href="/media/css/post.css">
+    <link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+    
+</head>
+<body class=" mdui-appbar-with-toolbar  mdui-theme-primary-pink mdui-theme-accent-pink">
+<header class="mdui-toolbar mdui-color-pink mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide" style="z-index: 1000">
+    <a href="javascript:;" mdui-drawer="{target: '#left-drawer',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+    <span class="mdui-typo-title">云渺阿姨的学习笔记</span>
+    <div class="mdui-toolbar-spacer"></div>
+<!--    <a href="javascript:history.go(0);" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+</header>
+
+<div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-drawer-close" id="left-drawer">
+    <ul class="mdui-list">
+        <li class="mdui-subheader">菜单</li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="https://linuxcpporz.github.io" class="mdui-list-item-content">首页</a>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="https://linuxcpporz.github.io/archives" class="mdui-list-item-content">归档</a>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="https://linuxcpporz.github.io/tags" class="mdui-list-item-content">标签</a>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="https://linuxcpporz.github.io/post/about" class="mdui-list-item-content">关于</a>
+        </li>
+        
+    </ul>
+</div>
+
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <article id="post-1270" class="post-1270 post type-post status-publish format-standard hentry category-90 category-129 tag-149">
+                <header class="entry-header">
+                    <h1 class="entry-title">十四种常见的算法</h1>
+                    <p class="entry-census">发布于 2021-10-17</p>
+                    <hr>
+                </header>
+                <div class="neko">
+                    <h1 id="滑动窗口">滑动窗口</h1>
 <p>滑动窗口类型的题目经常是用来执行数组或是链表上某个区间（窗口）上的操作。比如找最长的全为1的子数组长度。滑动窗口一般从第一个元素开始，一直往右边一个一个元素挪动。当然了，根据题目要求，我们可能有固定窗口大小的情况，也有窗口的大小变化的情况。</p>
 <p>下面是一些我们用来判断我们可能需要上滑动窗口策略的方法：</p>
 <ul>
@@ -256,133 +295,121 @@
 <li>任务执行顺序安排（中等）</li>
 <li>树的最小高度（困难）</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端深入Vue框架]]></title>
-        <id>https://linuxcpporz.github.io/post/qian-duan-shen-ru-vue-kuang-jia/</id>
-        <link href="https://linuxcpporz.github.io/post/qian-duan-shen-ru-vue-kuang-jia/">
-        </link>
-        <updated>2021-10-16T19:36:10.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="概述">概述</h1>
-<p>基于JavaScript的渐进式前段框架<br>
-基于JavaScript:本质就是封装了js代码,提供vue.js文件<br>
-渐进式:vue框架的功能很丰富,可以自己选择用哪些功能<br>
-前端框架:只是提供了一套API,指定软件的流程<br>
-特点:轻量级 + MVVM思想 + 数据驱动/双向绑定 + 组件化</p>
-<p>#步骤</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;测试 vue入门案例&lt;/title&gt;
-        &lt;!-- 步骤: 1.引入vue.js文件 
-            src指定js文件的位置,原则:先找到和自己网页同级的资源
-        --&gt;
-        &lt;script src=&quot;vue/vue.js&quot;&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- 2.准备数据渲染区:是指在指定位置展示vue提供的数据 --&gt;
-        &lt;div id=&quot;app&quot;&gt;{{msg}}{{hh}}&lt;/div&gt;
+
+                </div>
+            </article>
+        </main>
+    </div>
+    <div class="doc-footer-nav mdui-color-theme">
+        <div class="mdui-container">
+            <div class="mdui-row">
+                
+                <div class="mdui-col-xs-2 mdui-col-sm-6 doc-footer-nav-left"></div>
+                
+                
+                <a href="https://linuxcpporz.github.io/post/qian-duan-shen-ru-vue-kuang-jia/" class="mdui-ripple mdui-color-theme mdui-col-xs-10 mdui-col-sm-6 doc-footer-nav-right">
+                    <div class="doc-footer-nav-text">
+                        <i class="mdui-icon material-icons">arrow_forward</i>
+                        <span class="doc-footer-nav-direction">下一篇文章</span>
+                        <div class="doc-footer-nav-chapter">前端深入Vue框架</div>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    
         
-        &lt;!-- 3.使用vue准备数据,让第二步获取数据 --&gt;
-        &lt;script&gt;
-            var a = {
-                msg:&quot;99级封号斗罗&quot;,
-                hh:&quot;sdf&quot;
-            }
-            new Vue({
-                //el属性是挂载点,即将把数据展示在指定位置(css选择器)
-                el:&quot;#app&quot;,//指定数据渲染区,id选择器,用#获取id的值
-                //data属性是用来准备数据
-                data:a
-            })
-        &lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h1 id="mvvm">MVVM</h1>
-<p>M:Model 模型,数据 javascript对象 是指存数据的地方<br>
-V:View 视图 DOM 是指展示数据的地方<br>
-VM:ViewModel 通讯 观察者 练习了M和V的关系(new Vue)<br>
-好处是可以松耦合</p>
-<figure data-type="image" tabindex="1"><img src="https://linuxcpporz.github.io/post-images/1634413068538.png" alt="" loading="lazy"></figure>
-<h1 id="vue使用">Vue使用</h1>
-<p>vue使用步骤:导入vue.js文件,定位好view位置和model数据,通过new一个Vue对象来实现数据和视图的联系</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;测试 vue入门案例&lt;/title&gt;
-        &lt;!-- 步骤: 1.引入vue.js文件 
-            src指定js文件的位置,原则:先找到和自己网页同级的资源
-        --&gt;
-        &lt;script src=&quot;vue/vue.js&quot;&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- 2.准备数据渲染区:是指在指定位置展示vue提供的数据 --&gt;
-        &lt;div id=&quot;app&quot;&gt;{{msg}}{{hh}}&lt;/div&gt;
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+    var gitalk = new Gitalk({
+        clientID: 'a77b448ff65a1a73fe8a',
+        clientSecret: '6ea09d173e655496fdde38f90d00f7345cc5b02d',
+        repo: 'LinuxCpporz.github.io',
+        owner: 'LinuxCpporz',
+        admin: ['LinuxCpporz'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
         
-        &lt;!-- 3.使用vue准备数据,让第二步获取数据 --&gt;
-        &lt;script&gt;
-            var a = {
-                msg:&quot;99级封号斗罗&quot;,
-                hh:&quot;sdf&quot;
-            }
-            new Vue({
-                //el属性是挂载点,即将把数据展示在指定位置(css选择器)
-                el:&quot;#app&quot;,//指定数据渲染区,id选择器,用#获取id的值
-                //data属性是用来准备数据
-                data:a
-            })
-        &lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h1 id="浅析vue对象">浅析Vue对象</h1>
-<p>el是挂载点,是等待被数据渲染的位置,data是这个位置可以使用的数据,另外还有methods这个位置可以使用的函数<br>
-data数据的三种方式:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;测试 data里数据的三种写法&lt;/title&gt;
-        &lt;script src=&quot;./vue/vue.js&quot;&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div id=&quot;app&quot;&gt;{{msg}}&lt;/div&gt;
-        &lt;script&gt;
-            new Vue({
-                el:&quot;#app&quot;,
-                /* data数据的三种写法 */
-                //第一种:标准写法
-                // data:{
-                // 	msg:&quot;你好我是第一种写法标准写法&quot;
-                // }
-                //第二种:定义函数,返回对象
-                // data:function(){//方便的把组件间的关系实现松耦合
-                // 	return {
-                // 		msg:&quot;你好我是第二种写法定义函数,返回对象&quot;
-                // 	}
-                // }
-                //第三种:第二种的简写
-                data(){
-                    return{
-                        msg:&quot;你好我是第三种写法简写的函数&quot;
-                    }
-                }
-            })
-        &lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h1 id="vue指令">Vue指令</h1>
-<p>判断v-if<br>
-循环v-for<br>
-事件:v-on<br>
-绑定:v-bind<br>
-双向绑定:v-model<br>
-闪现:v-cloak</p>
-]]></content>
-    </entry>
-</feed>
+
+        
+    
+    
+</div>
+<footer class="mdui-container footer ">
+<!--    <div class="head_card-offset"></div>-->
+    <div class="mdui-row mdui-row-gapless">
+        <div class="k-container">
+            <img width="100%" src="/media/img/skirt.png">
+        </div>
+    </div>
+
+    <div class="site-info">
+        <span id="runtime_span"></span>
+<script type="text/javascript">
+    function show_runtime(){window.setTimeout("show_runtime()",1000);
+    X=new Date("10/17/2021 0:42:02");Y=new Date();T=(Y.getTime()-X.getTime());
+    M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;
+    C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
+    runtime_span.innerHTML="本站勉强运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();
+</script>
+    </div>
+</footer>
+<div id="landlord" style="left:5px;bottom:0px;">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+            <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+            <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden" />
+    <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="https://img.apa70.com/123.mp3" type="hidden">
+        <input name="live2dBGM" value="https://img.apa70.com/123.mp3" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
+    </div>
+</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script>
+    var message_Path = '/media/live2d/';//资源目录，如果目录不对请更改
+    var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
+</script>
+<!--<script src="/media/js/jquery-3.3.1.min.js"></script>-->
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/js/message.js"></script>
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"></script>
+<script src="/media/layer/layer.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.11.1/dist/av-min.js"></script>
+<script src="//unpkg.com/vue@next"></script>
+<script>
+    
+</script>
+<script type="module" src="/media/js/post.js"></script>
+</html>
