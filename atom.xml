@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://linuxcpporz.github.io</id>
     <title>云渺阿姨的学习笔记</title>
-    <updated>2021-10-18T17:28:47.451Z</updated>
+    <updated>2021-10-20T13:47:29.458Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://linuxcpporz.github.io"/>
     <link rel="self" href="https://linuxcpporz.github.io/atom.xml"/>
@@ -10,6 +10,149 @@
     <logo>https://linuxcpporz.github.io/images/avatar.png</logo>
     <icon>https://linuxcpporz.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 云渺阿姨的学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[程序设计上机遇到的一些问题]]></title>
+        <id>https://linuxcpporz.github.io/post/shang-ji/</id>
+        <link href="https://linuxcpporz.github.io/post/shang-ji/">
+        </link>
+        <updated>2021-10-19T07:34:51.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>是一些常见问题啦，就准备集中解答了。</strong></p>
+<p><strong>因为你们c++和c语言是一起讲的，正常来说都会是大一上学c语言，大一下学c++，所以我会同时讲c语言和c++的一些基础知识，当然推荐大家在大一上的时候使用c语言。</strong></p>
+<h1 id="1-vs2019安装及使用问题">1 vs2019安装及使用问题</h1>
+<h2 id="11-vs2019的安装">1.1 vs2019的安装</h2>
+<p>个人建议去微软官网用邮箱（QQ邮箱就可以）注册一个微软账号，然后去安装一个企业版（Enterprise)，因为企业版比社区版的组件更加多样，安装之后会提示你是试用的，但是微软对vs的密钥监管比较松，所以完全可以去网上百度一个密钥输入进去，一般情况下就可以正常使用了。<br>
+我是不能在这里直接放密钥出来的，我怕被递个律师函（x）</p>
+<p>密钥输入成功后如下图：</p>
+<figure data-type="image" tabindex="1"><img src="https://linuxcpporz.github.io/post-images/1634629527930.png" alt="" loading="lazy"></figure>
+<p>ps：微软由于是外网所以加载很慢，如果实在等不及了，懂的话可以选择科学上网（x），但是正常途径的话其实也可以访问，只是加载速度会很慢而已，等一会就可以了。</p>
+<p>pps：有人想要安装vs code，问我怎么安装，这个可以私聊问我，但是安装vs code会更加麻烦，比如配置环境变量和安装MinGW等等。</p>
+<h2 id="12-vs2019组件安装问题">1.2 vs2019组件安装问题</h2>
+<p>在安装的时候会显示让你装很多的工作负载，当然也不用都选上，只需要选择下图这个组件就能够满足现在大家的程序设计需求</p>
+<figure data-type="image" tabindex="2"><img src="https://linuxcpporz.github.io/post-images/1634630052641.png" alt="" loading="lazy"></figure>
+<p>当然如果你以后有着更多的需求（比如想学习python），可以选择工具-&gt;获取工具与功能去继续安装其他组件。</p>
+<h2 id="13-vs2019建立新项目的问题">1.3 vs2019建立新项目的问题</h2>
+<p>我们需要建立一个C++空项目，在命名时请不要出现特殊符号（我考试时候一般直接就会叫123），然后右键单击解决方案管理器中的源文件，选择如下图：</p>
+<figure data-type="image" tabindex="3"><img src="https://linuxcpporz.github.io/post-images/1634637443463.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://linuxcpporz.github.io/post-images/1634630748121.png" alt="" loading="lazy"></figure>
+<p>同样在命名的时候也不可以出现特殊字符哦~</p>
+<p>这样子就可以正常的去开始写代码了。</p>
+<h2 id="14-vs2019的scanf_s的问题">1.4 vs2019的scanf_s的问题</h2>
+<p>在scanf后加上_s是vs2019的特性，是一种安全周期检测，但是我发现在cg系统上提交带有_s的代码有可能会出问题，而且在打字的时候会不方便，取消_s的方法之一是：在头文件的后面main函数的前面加上一句“pragma warning(disable:4996)&quot;就可以解决这个问题，虽然也会有提示但是可以正常编译，如图：</p>
+<figure data-type="image" tabindex="5"><img src="https://linuxcpporz.github.io/post-images/1634631570219.png" alt="" loading="lazy"></figure>
+<h2 id="15-vs2010的黑框闪现问题">1.5 vs2010的黑框闪现问题</h2>
+<p>可能是因为2010太老了，所以需要手动暂停黑框，在上机时之前我们教大家的是在return 0处加断点，后来我发现有的电脑加断点也解决不了问题，所以建议在代码的return 0前面加上getchar();getchar();来解决这个问题，在提交到cg系统上的时候，需要将其注释掉，具体方法是在前面加//，否则cg系统会无法编译。</p>
+<p>请不要使用system(&quot;pause&quot;);因为system会对cg系统造成破坏，所以如果你在考试的时候提交代码忘记注释了它的话，你可能直接会被封了考试账号（那可真是一个悲惨的故事）。</p>
+<h2 id="16-在源文件里添加多个cpp文件的问题">1.6 在源文件里添加多个cpp文件的问题</h2>
+<p>请不要在源文件文件夹里添加多个cpp文件，否则会无法编译，对，就是真的无法编译（物理意义上的）。</p>
+<h2 id="17-不把上一次的exe黑框关掉就进行下一次编译">1.7 不把上一次的exe黑框关掉就进行下一次编译</h2>
+<p>如果你上次编译后没有关掉上一次编译出来的exe文件的话，就无法生成下一次编译出来的exe文件，就是黑框框撞车啦！一次只能生成一个，所以在调试完一定要及时把exe文件关掉哦。</p>
+<h1 id="2-c语言和c的超级基础知识">2 C语言和C++的超级基础知识</h1>
+<h2 id="21-头文件">2.1 头文件</h2>
+<p>百度百科对头文件的定义是：头文件的主要作用在于多个代码文件全局变量(函数)的重用、防止定义的冲突，对各个被调用函数给出一个描述，其本身不需要包含程序的逻辑实现代码，它只起描述性作用，用户程序只需要按照头文件中的接口声明来调用相关函数或变量，链接器会从库中寻找相应的实际定义代码。</p>
+<p>简单来说就是在编译代码的时候，编译器会通过头文件来找到对应的函数库，比如说你想要使用sqrt函数就需要使用“include &lt;math.h&gt;“。</p>
+<p>常用的头文件（用途参考百度百科和我自己的理解）：</p>
+<ul>
+<li>“include &lt;stdio.h&gt;”（或写成“include &lt; cstdio &gt;”）       ——stdio.h是C编译系统提供的一个文件名，stdio是“standard input &amp; output”的缩写，即有关标准输入输出的信息，说白了就是你使用c语言的scanf和printf时需要添加这个函数。</li>
+<li>“include &lt;stdlib.h&gt;”      ——stdlib 头文件即standard library标准库头文件。stdlib.h里面定义了五种类型、一些宏和通用工具函数。以后需要使用的malloc()，free()等，和现在大家使用的system()，都需要使用这个头文件。</li>
+<li>“include &lt; iostream &gt;”      ——和stdio类似，意思为标准的输入输出流头文件，它包含：cin&gt;&gt;&quot;要输入的内容&quot;，cout&lt;&lt;&quot;要输出的内容&quot;。</li>
+<li>“include &lt;math.h&gt;”（或写成“include &lt; cmath &gt;&quot;)    ——包含很多数学计算的库函数，比如：
+<ul>
+<li>abs(x)：求x的绝对值</li>
+<li>pow(double x,double y)：求x的y次幂</li>
+<li>sqrt(double x)：返回x的开方值</li>
+<li>floor(double x)：返回不大于x的最大整数，ceil(double x)：返回不小于x的最小整数</li>
+<li>sin(double x),cos(double x),tan(double x)：分别求x的正弦值、余弦值和正切值（把sin变成asin就可以求反三角函数啦，其他同理）</li>
+</ul>
+</li>
+<li>“include &lt;string.h&gt;”（或写成“include &lt; cstring &gt;”）   ——对字符串进行操作（过段时间会学），比如：
+<ul>
+<li>strcpy(char str1,char str2)：把字符串str2(包括'\0')拷贝到字符串str1当中，并返回str1。</li>
+<li>strcat(char str1,char str2)：把str2(包括'\0')拷贝到str1的尾部(连接)，并返回str1。其中终止原str1的'\0'被str2的第一个字符覆盖。</li>
+<li>strcmp（char str1,char str2)：按字典顺序比较两个字符串，返回整数值的意义如下：
+<ul>
+<li>小于0，str1小于str2；</li>
+<li>等于0，str1等于str2；</li>
+<li>大于0，str1大于str2；</li>
+</ul>
+</li>
+<li>strlen(char str)：返回字符串str的长度，'\0'不算在内。</li>
+</ul>
+</li>
+</ul>
+<p>ps：字符串的操作过段时间会学，感兴趣的话可以自行百度搜索字典序等相关知识。</p>
+<h2 id="22-命名空间注意这部分如果实在看不懂可以先跳过只需要记住最后一句话就可以">2.2 命名空间（注意，这部分如果实在看不懂可以先跳过，只需要记住最后一句话就可以）</h2>
+<p>C++标注已经明确提出不支持后缀为.h的头文件，所以说在书写C++的时候需要将所有带.h的头文件变成c什么什么。C++标准程序库中的所有标识符都被定义于一个名为std的namespace中。 由于namespace的概念，使用C++标准程序库的任何标识符时，可以有三种选择：</p>
+<p><strong>直接指定标识符</strong></p>
+<p>例如std::iostream而不是iostream。完整语句如下： std::cout &lt;&lt; std::hex &lt;&lt; 3.4 &lt;&lt; std::endl;</p>
+<p><strong>使用using关键字</strong></p>
+<p>using std::cout; using std::endl; using std::cin; 以上程序可以写成如下代码：</p>
+<p>using std::cout &lt;&lt;using std::hex &lt;&lt; 3.4 &lt;&lt;using std:: endl;</p>
+<p><strong>使用using namespace std</strong></p>
+<p>例如：</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;sstream&gt;
+#include&lt;string&gt;
+using namespace std;
+</code></pre>
+<p>这样命名空间std内定义的所有标识符都有效（曝光）。就好像它们被声明为全局变量一样。那么以上语句可以如下写: cout &lt;&lt; hex &lt;&lt; 3.4 &lt;&lt; endl; 因为标准库非常的庞大，所以程序员在选择的类的名称或函数名时就很有可能和标准库中的某个名字相同。所以为了避免这种情况所造成的名字冲突，就把标准库中的一切都放在名字空间std中。但这有会带来了一个新问题。无数原有的C++代码都依赖于使用了多年的伪标准库中的功能，他们都是在全局空间下的，所以就有了<iostream>和&lt;iostream.h&gt;等等这样的头文件，一个是为了兼容以前的C++代码，一个是为了支持新的标准。命名空间std封装的是标准程序库的名称，标准程序库为了和以前的头文件区别，一般都不加&quot;.h&quot;。</p>
+<p><strong>最后一句话，如果你实在看不懂命名空间这一节，请记住：在写C++程序时一定要在头文件的后面紧跟一个using namespace std; 切记切记。</strong></p>
+<h2 id="23-scanf和printf的用法以及cin和cout的用法">2.3 scanf和printf的用法以及cin和cout的用法</h2>
+<p><strong>请看下面的a+b代码（C语言）：</strong></p>
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+    int a,b,sum;
+    scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
+    sum=a+b;
+    printf(&quot;%d+%d=%d\n&quot;,a,b,sum);
+    return 0;
+}
+</code></pre>
+<p>scanf的注意事项：在两个双引号之间除了%d、%f等等，不要再添加其他的东西，最好连空格都不要有，否则可能会出现一些奇奇怪怪的未知bug，在要输入的变量之前一定要加上&amp;，就是&amp;a、&amp;b这个样子的。</p>
+<p>printf的注意事项：和scanf正好相反，在两个双引号之间可以出现符号和空格和\n，且会随着输出的值一起输出；在输出的变量前不需要加任何符号，\n代表换行。</p>
+<p><strong>再来看下面这个a+b代码（C++）：</strong></p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;//上面可是说过啦，一定要加这个
+int main()
+{
+    int a,b,sum;
+    cin&gt;&gt;a&gt;&gt;b;
+    sum=a+b;
+    cout&lt;&lt;a&lt;&lt;'+'&lt;&lt;b&lt;&lt;'='&lt;&lt;sum&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<p>cin和cout的注意事项：cin的输入使用&gt;&gt;，cout的输出使用&lt;&lt;，想要输出字符和空格时，如果输出单个字符或空格，请使用单引号' '来把符号或空格圈起来，如果是一串字符的话请使用&quot; &quot;；endl是C++的换行符。</p>
+<h2 id="24-基本的变量名和保留小数点的问题">2.4 基本的变量名和保留小数点的问题</h2>
+<p>int整型变量，float浮点型变量，double双精度浮点型变量，char字符型变量，long长整型变量，long long（比长整型更长的整型变量），在变量的前面加上unsigned表示除去负数部分，其负数部分的数据范围会被加在正数范围里，这些变量的数据范围如下：</p>
+<ul>
+<li>int整型变量：2*10^9</li>
+<li>long长整型变量：21亿</li>
+<li>long long：9*10^18</li>
+<li>float：可以精确到小数点后38位</li>
+<li>double：可以精确到小数点后308位</li>
+</ul>
+<p>在C语言输入输出时，int使用%d，long使用%ld，long long使用%lld，float使用%f，double使用%lf，char使用%c输入输出字符，使用%s输出字符串。</p>
+<h2 id="25-一些其他的小问题">2.5 一些其他的小问题</h2>
+<ol>
+<li>拼写错误：
+<ol>
+<li>int main()，不是int mian()</li>
+<li>scanf不要写成scnaf，printf不要只写个print</li>
+<li>return不要写成retrun</li>
+</ol>
+</li>
+<li>中英文符号问题：中英文符号是有很大区别的，写代码一定要用英文符号，辨认中英文符号的方法是通过空隙的大小来区分，比如说：!!!!!（英文符号空隙小），！！！！！（中文符号空隙大）。</li>
+<li>丢三落四的：不写分号，大括号小括号忘记引回，忘写头文件。</li>
+<li>C语言的数学计算和正常做数学题不一样，有一道课后习题是1.8C+......加什么玩意我忘了，很多人就直接写1.8C+......，这可不行，电脑那个傻了吧唧的东西是不知道你把称号给省略了的，所以一定要写1.8*C。</li>
+</ol>
+<h1 id="3-一些其他的问题">3 一些其他的问题</h1>
+<p>学习计算机很重要的一点就是遇到问题要学会自己查阅资料，百度百科，必应搜素，还有谷歌，当然少不了我们的程序员必备秃顶神器CSDN，网址在这里：https://www.csdn.net/</p>
+<p>风里雨里，我在超(C)市(S)等(D)你(N)</p>
+<p>还有一个小小问题，希望大家在问别人问题的时候可以截屏过来，最好不要用手机拍屏幕哦，因为环境光线问题你拍的照片可能已经糊成一团了，真的很费眼睛嘤嘤嘤~</p>
+<h1 id="大概先就总结这么多啦这篇文章大部分都是一个字一个字用手敲出来的哦手都酸了求个小小的支持呜呜~">大概先就总结这么多啦，这篇文章大部分都是一个字一个字用手敲出来的哦，手都酸了，求个小小的支持呜呜~</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C++实现十大排序算法]]></title>
         <id>https://linuxcpporz.github.io/post/cshi-xian-shi-da-pai-xu-suan-fa/</id>
