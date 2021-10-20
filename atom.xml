@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://linuxcpporz.github.io</id>
     <title>云渺阿姨的学习笔记</title>
-    <updated>2021-10-20T13:52:12.624Z</updated>
+    <updated>2021-10-20T13:56:30.840Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://linuxcpporz.github.io"/>
     <link rel="self" href="https://linuxcpporz.github.io/atom.xml"/>
@@ -133,6 +133,7 @@ int main()
 <li>double：可以精确到小数点后308位</li>
 </ul>
 <p>在C语言输入输出时，int使用%d，long使用%ld，long long使用%lld，float使用%f，double使用%lf，char使用%c输入输出字符，使用%s输出字符串。</p>
+<p>保留小数点后几位推荐使用C语言来写（我们自己写的时候都是用C语言写的，C++那个太长了，实在记不住），具体做法是把%lf变成%.2lf，这样子就是保留两位小数，至于为什么我要用double的lf来举例，是因为double比float的精度更高，<strong>所以推荐大家在使用浮点型变量时使用double而不是float。</strong></p>
 <h2 id="25-一些其他的小问题">2.5 一些其他的小问题</h2>
 <ol>
 <li>拼写错误：
