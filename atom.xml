@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://linuxcpporz.github.io</id>
     <title>云渺阿姨的学习笔记</title>
-    <updated>2021-10-21T07:23:33.341Z</updated>
+    <updated>2021-10-21T07:26:56.298Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://linuxcpporz.github.io"/>
     <link rel="self" href="https://linuxcpporz.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://linuxcpporz.github.io/post/shang-ji/</id>
         <link href="https://linuxcpporz.github.io/post/shang-ji/">
         </link>
-        <updated>2021-10-19T07:34:51.000Z</updated>
+        <updated>2021-10-21T07:23:44.000Z</updated>
         <content type="html"><![CDATA[<p><strong>是一些常见问题啦，就准备集中解答了。</strong></p>
 <p><strong>因为你们c++和c语言是一起讲的，正常来说都会是大一上学c语言，大一下学c++，所以我会同时讲c语言和c++的一些基础知识，当然推荐大家在大一上的时候使用c语言。</strong></p>
 <h1 id="1-vs2019安装及使用问题">1 vs2019安装及使用问题</h1>
