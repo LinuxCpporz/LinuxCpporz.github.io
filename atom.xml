@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://linuxcpporz.github.io</id>
     <title>云渺阿姨的学习笔记</title>
-    <updated>2021-10-21T07:26:56.298Z</updated>
+    <updated>2021-10-21T08:07:49.220Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://linuxcpporz.github.io"/>
     <link rel="self" href="https://linuxcpporz.github.io/atom.xml"/>
@@ -145,7 +145,7 @@ int main()
 </li>
 <li>中英文符号问题：中英文符号是有很大区别的，写代码一定要用英文符号，辨认中英文符号的方法是通过空隙的大小来区分，比如说：!!!!!（英文符号空隙小），！！！！！（中文符号空隙大）。</li>
 <li>丢三落四的：不写分号，大括号小括号忘记引回，忘写头文件。</li>
-<li>C语言的数学计算和正常做数学题不一样，有一道课后习题是1.8C+......加什么玩意我忘了，很多人就直接写1.8C+......，这可不行，电脑那个傻了吧唧的东西是不知道你把称号给省略了的，所以一定要写1.8*C。</li>
+<li>C语言的数学计算和正常做数学题不一样，有一道课后习题是1.8C+......加什么玩意我忘了，很多人就直接写1.8C+......，这可不行，电脑那个傻了吧唧的东西是不知道你把乘号给省略了的，所以一定要写1.8*C。</li>
 </ol>
 <h1 id="3-一些其他的问题">3 一些其他的问题</h1>
 <p>学习计算机很重要的一点就是遇到问题要学会自己查阅资料，百度百科，必应搜素，还有谷歌，当然少不了我们的程序员必备秃顶神器CSDN，网址在这里：https://www.csdn.net/</p>
